@@ -10,8 +10,16 @@
 <meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Giraffe Adventure 3">
 <link rel="preload" href="fonts/lilita.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css?v=1">
-<!--sample--><script>(()=>{try{const R=location.pathname.split('/')[1]||'',K='pa_sample:'+R,q=new URLSearchParams(location.search),v=q.get('sample');
-const s='589';window.__SAMPLE=s;
+<!--sample--><script>(()=>{try{const R=location.pathname.split('/')[1]||'',UH=["eebe750272936918fd09635d0f71e96528cd9ca0f2817ecd8cfcf4513552abd0"],DEF="589",UK='pa_unl:'+R,q=new URLSearchParams(location.search),sha=function(s){s=unescape(encodeURIComponent(s));const K=[],H=[1779033703,3144134277,1013904242,2773480762,1359893119,2600822924,528734635,1541459225];let n=2,c=0;while(c<64){let p=1;for(let d=2;d*d<=n;d++)if(n%d==0){p=0;break}if(p)K[c++]=(Math.pow(n,1/3)%1)*4294967296|0;n++}
+const l=s.length,w=[];for(let i=0;i<l;i++)w[i>>2]|=s.charCodeAt(i)<<(24-(i%4)*8);w[l>>2]|=0x80<<(24-(l%4)*8);const L=((l+8)>>6<<4)+16;for(let i=(l>>2)+1;i<L;i++)w[i]=w[i]|0;w[L-1]=l*8;
+const r=(x,y)=>x>>>y|x<<(32-y);for(let j=0;j<L;j+=16){const W=w.slice(j,j+16);let [a,b,cc,d,e,f,g,h]=H;for(let i=0;i<64;i++){if(i>15){const x=W[i-15],y=W[i-2];W[i]=(W[i-16]+(r(x,7)^r(x,18)^x>>>3)+W[i-7]+(r(y,17)^r(y,19)^y>>>10))|0}
+const t1=(h+(r(e,6)^r(e,11)^r(e,25))+(e&f^~e&g)+K[i]+W[i])|0,t2=((r(a,2)^r(a,13)^r(a,22))+(a&b^a&cc^b&cc))|0;h=g;g=f;f=e;e=(d+t1)|0;d=cc;cc=b;b=a;a=(t1+t2)|0}
+H[0]=H[0]+a|0;H[1]=H[1]+b|0;H[2]=H[2]+cc|0;H[3]=H[3]+d|0;H[4]=H[4]+e|0;H[5]=H[5]+f|0;H[6]=H[6]+g|0;H[7]=H[7]+h|0}return H.map(x=>(x>>>0).toString(16).padStart(8,'0')).join('')};
+let un=false,code=q.get('unlocked'),bad=false;const ok=h=>UH.indexOf(h)>=0;
+if(code!==null){code=code.trim();const h=sha(code);if(ok(h)){un=true;try{localStorage.setItem(UK,h)}catch(e){}}else bad=true}
+if(!un){try{un=ok(localStorage.getItem(UK)||'')}catch(e){}}
+const v=(q.get('sample')||'').replace(/[^a-z0-9-]/gi,'').slice(0,16);window.__UNLOCKED=un;window.__UNLOCK_BAD=bad;window.__SAMPLE=un?null:((v==='bhs'||v==='589')?v:DEF);
+if(un){if(code!==null&&!bad){const m=document.querySelector('link[rel=manifest]');if(m){fetch(m.href).then(r=>r.json()).then(j=>{j.start_url=location.origin+location.pathname+'?unlocked='+encodeURIComponent(code);j.scope=location.origin+location.pathname;(j.icons||[]).forEach(i=>{i.src=new URL(i.src,m.href).href});m.href='data:application/manifest+json,'+encodeURIComponent(JSON.stringify(j))}).catch(()=>{})}}return}
 document.querySelectorAll('link[rel=manifest]').forEach(l=>l.remove());
 if('serviceWorker' in navigator){try{navigator.serviceWorker.register=()=>new Promise(()=>{})}catch(e){}}
 addEventListener('beforeinstallprompt',e=>{e.preventDefault();e.stopImmediatePropagation()},true);window.__ACS=[];['AudioContext','webkitAudioContext'].forEach(n=>{const O=window[n];if(!O)return;const W=function(...a){const c=new O(...a);window.__ACS.push(c);return c};W.prototype=O.prototype;try{Object.setPrototypeOf(W,O)}catch(e){}window[n]=W})}catch(e){}})()</script><!--/sample--></head><body>
